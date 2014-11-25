@@ -14,6 +14,18 @@ var Cardify = {};
  */
 Cardify.Analyze = {};
 
+/**
+ * Gather object
+ *
+ * The functions under Gather will collect links of potential content to
+ * analyze.
+ *
+ * The links will be collected in an array. The resulting array will be
+ * procesed and passed to the Analyze object.
+ *
+ */
+Cardify.Gather = {};
+
 Cardify.Construct = {};
 
 Cardify.Display = {};
