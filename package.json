@@ -1,0 +1,26 @@
+{
+  "name": "cardify.js",
+  "version": "0.0.1",
+  "description": "A JavaScript library for parsing scrollable content into card format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rememberlenny/cardify.git"
+  },
+  "keywords": [
+    "card",
+    "content",
+    "scroll",
+    "swipe",
+    "mobile"
+  ],
+  "author": "Leonard K. Bogdonoff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rememberlenny/cardify/issues"
+  },
+  "homepage": "https://github.com/rememberlenny/cardify"
+}
