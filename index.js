@@ -109,6 +109,10 @@ Cardify.Analyze = {
     this.options.doc.content = {}; // Save this
   },
 
+  /**
+   * Loop through the body's nodes and pass on to functional methods
+   * @return {[type]} [description]
+   */
   processAllTags: function(){
     var properties = {},
         reference = [];
@@ -125,7 +129,7 @@ Cardify.Analyze = {
    * @return countedTags
    */
   countContentTags: function(tag){
-
+    var tagsToCheckFor = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote' ];
     return count;
   }
 
