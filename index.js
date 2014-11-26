@@ -25,41 +25,81 @@ var Cardify = Cardify || {};
  *
  */
 Cardify.Analyze = {
+
+  /**
+   * Options for Analyze
+   *
+   * Initialize default values. None of them should need to be used.
+   *
+   */
   options: {
     view: {
-
+      wordCapacity: 0,
+      fontSize: 10,
     },
     doc: {
       page: {},
       content: {}
     },
-
   },
 
   blastoff: function(){
     this.analyzeWindow();
-    this.accessPage();
-    this.identifyContent();
+    this.analyzePage();
   },
 
+  /**
+   * All the window analysis functions get initialized under here
+   * @initBy blastOff
+   */
   analyzeWindow: function(){
+    this.getBodyFontSize();
+    this.getWordCount();
+  },
+
+  /**
+   * Use the body node as reference for card font-size
+   * @initBy analyzeWindow
+   */
+  getBodyFontSize: function(){
+    var body = querySelector('body');
+    var bodyFontSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
+
+    this.options.view.fontSize = bodyFontSize; // Get body font size getComputedStyle
+  },
+
+  /**
+   * Look at window and guestimate the number of characters per cards
+   * @initBy analyzeWindow
+   */
+  getWordCount: function(){
     window;   // Make analysis decisions from here
+
+    this.options.view.wordCapacity = 0; // window
   },
 
   /**
    * Grab the entire DOM and save the reference to nodes
    */
-  accessPage: function(){
-    document; // Get content from here
+  analyzePage: function(){
+    this.getAllNodes();
+    this.getMainContent();
+  },
 
+  /**
+   * Access document to save all the nodes.
+   * @initBy analyzePage
+   */
+  getAllNodes: function(){
+    var page = document.querySelectorAll('*'); // Get content from here
 
-    this.page = {};
+    this.options.doc.page = page;
   },
 
   /**
    * Process current page to identify the main content
    */
-  identifyContent: function(){
+  getMainContent: function(){
     this.options.doc.page;         // Do something to this
 
     this.options.doc.content = {}; // Save this
