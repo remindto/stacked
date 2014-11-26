@@ -9,7 +9,8 @@ var Cardify = {};
  * to be Cardified. The content will be examined for word count, potential
  * card breaks, and any assets requiring special layout.
  *
- * Eventually, Analyze will be fed content from Gather.
+ * Eventually, Analyze will be fed content from Gather. The results will
+ * be sent to Construct.
  *
  */
 Cardify.Analyze = {};
@@ -26,6 +27,15 @@ Cardify.Analyze = {};
  */
 Cardify.Gather = {};
 
+/**
+ * Construct object
+ *
+ * The functions under Construct will be responsible for constructing the
+ * content into cards.
+ *
+ * The results from Analyze will guide the size, quantity, and content of
+ * cards.
+ */
 Cardify.Construct = {};
 
 Cardify.Display = {};
