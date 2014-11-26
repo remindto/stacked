@@ -1,4 +1,4 @@
-var Cardify = {};
+var Cardify = Cardify || {};
 
 /**
  * Analyze object
