@@ -138,17 +138,17 @@ Cardify.Analyze = {
    *
    */
   countContentTags: function(tag){
-    var count = 0;
+    var totalCount = 0;
     var match = [ 'H1', 'H2', 'H3', 'H4', 'H5', 'P', 'BLOCKQUOTE', 'IMG' ];
     var tagsChildren = tag.childNodes;
     for(i = 0; i < tagsChildren.length; i++){
       for(j = 0; j < match.length; j++){
         if(tagsChildren[i].nodeName.toUpperCase() == match[j].toUpperCase()){
-          count++;
+          totalCount++;
         }
       }
     }
-    return count;
+    return totalCount;
   }
 
 };
