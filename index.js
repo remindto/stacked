@@ -5,7 +5,7 @@
  * Cardify - Turning content into cards
  *
  * A JavaScript library for parsing scrollable content into card format.
-
+ *
  * This library will work best on touch devices.
  *
  */
@@ -27,8 +27,15 @@ var Cardify = Cardify || {};
 Cardify.Analyze = {
 
   blastoff: function(){
+    this.accessPage();
+    this.identifyContent();
+  },
+  accessPage: function(){
 
   },
+  identifyContent: function(){
+
+  }
 
 };
 
