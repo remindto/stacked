@@ -83,6 +83,7 @@ Cardify.Analyze = {
    */
   analyzePage: function(){
     this.getAllNodes();
+    this.getNodeReference();
     this.getMainContent();
   },
 
@@ -95,23 +96,26 @@ Cardify.Analyze = {
 
     this.options.doc.page = page;
   },
+  /**
+   * Find the element with the most h1, h2, h3, h4, h5, p tags
+   */
+  getNodeReference: function(){
+    var page = this.options.doc.page;
+
+    this.options.doc.reference = this.processAllTags(page);
+  },
 
   /**
    * Process current page to identify the main content
-   *
-   * Find the element with the most h1, h2, h3, h4, h5, p tags
    */
   getMainContent: function(){
-    var page = this.options.doc.page,
-        reference = [];
 
-    reference = this.processAllTags(page);
     this.options.doc.content = {}; // Save this
   },
 
   /**
    * Loop through the body's nodes and pass on to functional methods
-   * @return {[type]} [description]
+   * @return reference [Object] Collected count of nodes likelyhood of content
    */
   processAllTags: function(){
     var properties = {},
@@ -126,6 +130,7 @@ Cardify.Analyze = {
 
   /**
    * Count the number of content tags in the element
+   * @initBy processAllTags
    * @return countedTags
    *
    * Potentially, this could be used in the future to keep track of how many
