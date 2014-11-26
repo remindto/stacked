@@ -109,22 +109,23 @@ Cardify.Analyze = {
    * Process current page to identify the main content
    */
   getMainContent: function(){
-    var reference = this.options.doc.reference,
-        highestIndex;
-    highestIndex = this.findContentNode(reference);
-    this.options.doc.content = reference[highestIndex]; // Save this
+    var reference = this.options.doc.reference;
+
+    this.options.doc.content = this.findContentNode(reference); // Save this
   },
 
   /**
    * Identify the reference index with highest count
    */
   findContentNode: function(reference){
-    var current,
-        largest = 0;
+    var largest = 0;
     for(i = 0; i < reference.length; i++){
-      reference[i]['count'];
+      if(reference[i]['count'] > reference[largest]['count']){
+        largest = i;
+      }
     }
-    return content;
+
+    return reference[largest];
   },
 
   /**
