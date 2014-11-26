@@ -34,9 +34,18 @@ Cardify.Gather = {};
  * content into cards.
  *
  * The results from Analyze will guide the size, quantity, and content of
- * cards.
+ * cards. The returned cards will be sent to Display.
+ *
  */
 Cardify.Construct = {};
 
+/**
+ * Display object
+ *
+ * The functions under Display will serve the cards to the the user.
+ *
+ * Display will take returned results from Construct.
+ *
+ */
 Cardify.Display = {};
 
