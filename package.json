@@ -1,5 +1,5 @@
 {
-  "name": "card-to-content.js",
+  "name": "cardbased",
   "version": "0.0.1",
   "description": "A JavaScript library for parsing scrollable content into card format.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rememberlenny/content-to-cards.git"
+    "url": "git@github.com:rememberlenny/cardbased.git"
   },
   "keywords": [
     "card",
@@ -20,7 +20,7 @@
   "author": "Leonard K. Bogdonoff",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rememberlenny/content-to-cards/issues"
+    "url": "https://github.com/rememberlenny/cardbased/issues"
   },
-  "homepage": "https://github.com/rememberlenny/content-to-cards"
+  "homepage": "https://github.com/rememberlenny/cardbased"
 }
