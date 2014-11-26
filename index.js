@@ -1,3 +1,5 @@
+(function(window){
+
 var Cardify = Cardify || {};
 
 /**
@@ -49,3 +51,4 @@ Cardify.Construct = {};
  */
 Cardify.Display = {};
 
+})(window, undefined);
