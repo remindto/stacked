@@ -25,16 +25,44 @@ var Cardify = Cardify || {};
  *
  */
 Cardify.Analyze = {
+  options: {
+    view: {
+
+    },
+    doc: {
+      page: {},
+      content: {}
+    },
+
+  },
 
   blastoff: function(){
+    this.analyzeWindow();
     this.accessPage();
     this.identifyContent();
   },
-  accessPage: function(){
 
+  analyzeWindow: function(){
+    window;   // Make analysis decisions from here
   },
-  identifyContent: function(){
 
+  /**
+   * Grab the entire DOM and save the reference to nodes
+   */
+  accessPage: function(){
+    document; // Get content from here
+
+
+    this.page = {};
+  },
+
+  /**
+   * Process current page to identify the main content
+   */
+  identifyContent: function(){
+    this.options.doc.page;         // Do something to this
+
+    this.options.doc.content = {}; // Save this
   }
 
 };
