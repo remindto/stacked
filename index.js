@@ -1,5 +1,14 @@
 ;(function(window){
 
+
+/**
+ * Cardify - Turning content into cards
+ *
+ * A JavaScript library for parsing scrollable content into card format.
+
+ * This library will work best on touch devices.
+ *
+ */
 var Cardify = Cardify || {};
 
 /**
@@ -15,7 +24,13 @@ var Cardify = Cardify || {};
  * be sent to Construct.
  *
  */
-Cardify.Analyze = {};
+Cardify.Analyze = {
+
+  blastoff: function(){
+
+  },
+
+};
 
 /**
  * Gather object
@@ -51,4 +66,14 @@ Cardify.Construct = {};
  */
 Cardify.Display = {};
 
+/**
+ * Interface object
+ *
+ * The functions under Interface will be responsible for the behavior of
+ * cards in the browser.
+ *
+ */
+Cardify.Interface = {};
+
 })(window, undefined);
+
