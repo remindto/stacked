@@ -1,6 +1,6 @@
 {
   "name": "cardify.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A JavaScript library for parsing scrollable content into card format.",
   "main": "index.js",
   "scripts": {
