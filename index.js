@@ -102,14 +102,22 @@ Cardify.Analyze = {
    * Find the element with the most h1, h2, h3, h4, h5, p tags
    */
   getMainContent: function(){
-    var page = this.options.doc.page,         // Do something to this
-        properties = {},
+    var page = this.options.doc.page,
+        reference = [];
+
+    reference = this.processAllTags(page);
+    this.options.doc.content = {}; // Save this
+  },
+
+  processAllTags: function(){
+    var properties = {},
         reference = [];
     for(i = 0; i < page.length; i++){
       properties.el = page[i];
       properties.count = this.countContentTags(page[i]);
+      reference.push(properties);
     }
-    this.options.doc.content = {}; // Save this
+    return reference;
   },
 
   /**
