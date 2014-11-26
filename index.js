@@ -102,22 +102,36 @@ Cardify.Analyze = {
   getNodeReference: function(){
     var page = this.options.doc.page;
 
-    this.options.doc.reference = this.processAllTags(page);
+    this.options.doc.reference = this.processAllNodes(page);
   },
 
   /**
    * Process current page to identify the main content
    */
   getMainContent: function(){
+    var reference = this.options.doc.reference,
+        highestIndex;
+    highestIndex = this.findContentNode(reference);
+    this.options.doc.content = reference[highestIndex]; // Save this
+  },
 
-    this.options.doc.content = {}; // Save this
+  /**
+   * Identify the reference index with highest count
+   */
+  findContentNode: function(reference){
+    var current,
+        largest = 0;
+    for(i = 0; i < reference.length; i++){
+      reference[i]['count'];
+    }
+    return content;
   },
 
   /**
    * Loop through the body's nodes and pass on to functional methods
    * @return reference [Object] Collected count of nodes likelyhood of content
    */
-  processAllTags: function(){
+  processAllNodes: function(){
     var properties = {},
         reference = [];
     for(i = 0; i < page.length; i++){
@@ -125,6 +139,7 @@ Cardify.Analyze = {
       properties.count = this.countContentTags(page[i]);
       reference.push(properties);
     }
+
     return reference;
   },
 
@@ -153,6 +168,7 @@ Cardify.Analyze = {
         }
       }
     }
+
     return totalCount;
   }
 
