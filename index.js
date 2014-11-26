@@ -127,9 +127,27 @@ Cardify.Analyze = {
   /**
    * Count the number of content tags in the element
    * @return countedTags
+   *
+   * Potentially, this could be used in the future to keep track of how many
+   * of each tag there are. Also, keep track of how many works are in the tags.
+   *
+   * This would create the potential for identifying the type of content.
+   * If there are a lot of images, then its most likely a slideshow.
+   *
+   * For example, h1: 1, h2: 0, [...] p: 12.
+   *
    */
   countContentTags: function(tag){
-    var tagsToCheckFor = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote' ];
+    var count = 0;
+    var match = [ 'H1', 'H2', 'H3', 'H4', 'H5', 'P', 'BLOCKQUOTE' ];
+    var tagsChildren = tag.childNodes;
+    for(i = 0; i < tagsChildren.length; i++){
+      for(j = 0; j < match.length; j++){
+        if(tagsChildren[i].nodeName == match[j]){
+          count++;
+        }
+      }
+    }
     return count;
   }
 
