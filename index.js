@@ -43,6 +43,17 @@ Cardify.Analyze = {
     },
   },
 
+  /**
+   * Initialize
+   *
+   * Add option to manually set the card params
+   *
+   * ****** v2 ******
+   * Number of rows-
+   * Number of characters wide-
+   * Height/Width of cards-
+   *
+   */
   blastoff: function(options){
     this.analyzeWindow();
     this.analyzePage();
@@ -51,7 +62,6 @@ Cardify.Analyze = {
 
   /**
    * If user wants, overwrite options
-   * @return {[type]} [description]
    */
   overwriteOptions: function(options){
     this.options.view = options.view || this.options.view;
