@@ -1,4 +1,4 @@
-var Cardify = Cardify || {};
+var Stacked = Stacked || {};
 
 /**
  * Analyze object
@@ -13,7 +13,7 @@ var Cardify = Cardify || {};
  * be sent to Construct.
  *
  */
-Cardify.Analyze = {
+ Stacked.Analyze = {
 
   /**
    * Options for Analyze

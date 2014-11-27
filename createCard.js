@@ -1,4 +1,4 @@
-var Cardify = Cardify || {};
+var Stacked = Stacked || {};
 
 /**
  * Construct object
@@ -10,7 +10,7 @@ var Cardify = Cardify || {};
  * cards. The returned cards will be sent to Display.
  *
  */
-Cardify.Construct = {
+Stacked.Construct = {
   options: {
 
     card: {

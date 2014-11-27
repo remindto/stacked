@@ -9,7 +9,7 @@
  * This library will work best on touch devices.
  *
  */
-var Cardify = Cardify || {};
+ var Stacked = Stacked || {};
 
 
 /**
@@ -22,7 +22,7 @@ var Cardify = Cardify || {};
  * procesed and passed to the Analyze object.
  *
  */
-Cardify.Gather = {};
+ Stacked.Gather = {};
 
 
 
@@ -34,7 +34,7 @@ Cardify.Gather = {};
  * Display will take returned results from Construct.
  *
  */
-Cardify.Display = {};
+ Stacked.Display = {};
 
 /**
  * Interface object
@@ -43,7 +43,7 @@ Cardify.Display = {};
  * cards in the browser.
  *
  */
-Cardify.Interface = {};
+ Stacked.Interface = {};
 
 })(window, undefined);
 
