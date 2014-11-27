@@ -1,7 +1,7 @@
 # stacked - turn web content into swipable card stacks
 
-## Get Started
+## Installation
 
-## Install
+## Usage
 
 ## Questions
