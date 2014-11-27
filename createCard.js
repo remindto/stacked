@@ -12,19 +12,31 @@ var Cardify = Cardify || {};
  */
 Cardify.Construct = {
   options: {
+
     card: {
       width: '300px',
-      height: '400px'
+      height: '400px',
+      lines: 10
     },
     content: {
+      selector: 'body',
       lineHeight: '10px',
       fontSize: '10px',
     }
   },
   blastOff: function(){
-
+    this.getContentValues();
+    this.calculateLinesInCard();
   },
+  getContentValues: function(){
+    var self = this;
+    this.content.lineHeight = window.getComputedStyle(self.contentSelector, null).getPropertyValue('line-height');
+    this.content.fontSize = window.getComputedStyle(self.contentSelector, null).getPropertyValue('font-size');
+  },
+  calculateLinesInCard: function(){
+    this.card.lines = (this.card.width/this.content.lineHeight);
+  }
 };
 
-window.getComputedStyle(body, null).getPropertyValue('line-height')
+
 
