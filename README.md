@@ -1,6 +1,7 @@
-# cardbased - 
-
-A library for parsing scrollable content into card format.
+# stacked - turn web content into swipable card stacks
 
 ## Get Started
 
+## Install
+
+## Questions
