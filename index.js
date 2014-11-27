@@ -43,9 +43,19 @@ Cardify.Analyze = {
     },
   },
 
-  blastoff: function(){
+  blastoff: function(options){
     this.analyzeWindow();
     this.analyzePage();
+    this.overwriteOptions(options);
+  },
+
+  /**
+   * If user wants, overwrite options
+   * @return {[type]} [description]
+   */
+  overwriteOptions: function(options){
+    this.options.view = options.view || this.options.view;
+    this.options.doc = options.doc || this.options.doc;
   },
 
   /**
